@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Neighborhood Map</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/simple-sidebar.css">
+  </head>
+  <body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+
+                </li>
+            </ul>
+            <ul class="sidebar-nav">
+              <li class="sidebar-brand">
+                <a href="#">
+                  <h1>Neighborhood Map</h1>
+                </a>
+                <li>
+                  <form id="form-filter" data-bind="submit: filterPlaces">
+                    <input type="text" name="filter" id="text-filter"><br>
+                    <input type="submit" value="Filter" id="submit-filter">
+                    <button data-bind="click: clearFilter" id="btn-clear-filter">Clear Filter</button>
+                  </form>
+                </li>
+                <!-- ko foreach: places_to_show -->
+                  <li><a href="#" data-bind="text: name, click: $parent.showInfoWindow, visible: item_visible"></a></li>
+                <!-- /ko -->
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper" class="page-content-map">
+            <div class="container-fluid container-map">
+                <div class="row row-map">
+                    <div class="col-lg-12 col-lg-map">
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> Toggle Menu</a>
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="./js/lib/knockout-3.4.0.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7GsuxkrHSjk6yE9iHB7bNyMhXRFJfC5Y&callback=initMap" async defer></script>
+    <script src="./js/error-handling.js"></script>
+  </body>
+</html>

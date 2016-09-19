@@ -1,0 +1,40 @@
+/* Side Navigation Style */
+body, html {
+    font-family: "Lato", sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/* End of Side Navigation Style */
+
+/* Styles for Map */
+
+#map {
+  width: 90%;
+  height: 90%;
+  left: 0;
+  top: 0;
+  position: relative;
+}
+
+.page-content-map, .container-map, .page-content-map, .row-map, .col-lg-map, #wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+#text-filter {
+  max-width: 150px;
+}
+
+#form-filter {
+  line-height: 1em;
+  margin-bottom: 20px;
+}
+
+#btn-clear-filter, #submit-filter {
+  margin-top: 10px;
+}
