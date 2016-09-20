@@ -151,6 +151,10 @@ function updateMap(filtered_places) {
   });
 }
 
+function googleError() {
+  alert("Google Maps could not be loaded.");
+}
+
 var ViewModel = function() {
   var self = this;
 

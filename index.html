@@ -45,7 +45,7 @@
                         <div id="map" data-bind="text: GMapsStatus"></div>
                     </div>
                 </div>
-            </div>            
+            </div>
         </div>
         <!-- /#page-content-wrapper -->
 
@@ -68,6 +68,6 @@
     });
     </script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7GsuxkrHSjk6yE9iHB7bNyMhXRFJfC5Y&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7GsuxkrHSjk6yE9iHB7bNyMhXRFJfC5Y&callback=initMap" async defer onerror="googleError()"></script>
   </body>
 </html>
